@@ -72,7 +72,6 @@ const myCorrectlyGuessedLetters = function(aRandomSplittedWord, inputArray) {
       return "_";
     }
   });
-  console.log(wordDisplay);
   document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
 };
 
