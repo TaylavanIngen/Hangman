@@ -1,3 +1,52 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #414A4F;
+  background-color: lightblue;
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  background-color: #FFF;
+  width: 60%;
+  margin: 20px 20%;
+  border-radius: 3px;
+}
+
+.title {
+  width: fit-content;
+  margin: auto;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 60px;
+  padding-top: 30px;
+  color: #357171;
+}
+
+.subtitle {
+  width: fit-content;
+  margin: auto;
+  padding: 6px;
+  background-color: #Ed9230;
+  border-radius: 3px;
+  color: #FFF;
+  font-size: 12px;
+}
+
+.result {
+  height: 300px;
+}
+
+.lives {
+  padding: 20px; 0;
+  line-height: 1;
+}
+
+.lives span {
+  font-family: 'Abril Fatface', cursive;
+  color: #44857D;
+  font-size: 200px;
+}
+
 .win,
 .lose {
   display: none;
@@ -10,3 +59,31 @@
 .lose h2 {
   color: blue;
 }
+
+.hangman-input-area {
+  height: 400px;
+}
+
+input {
+  width: 98px;
+  height: 34px;
+  border: 1.5px solid #357171;
+  text-align: center;
+  border-radius: 3px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 3px;
+}
+
+.guess{background-color: #Ed9230;}
+.guess:hover{background-color: #E96429; transition: 0.3s;}
+.restart{background-color: #44857D;}
+.restart:hover{background-color: #1B3D59; transition: 0.3s}
