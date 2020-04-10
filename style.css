@@ -103,8 +103,6 @@ body {
 @keyframes lose {
   from{transform: scale(0.1)}
   to{transform: scale(3)}
-  bottom:30px;
-  left: 600px;
 }
 
 .hangman-input-area {
