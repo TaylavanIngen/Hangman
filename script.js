@@ -49,7 +49,8 @@ const showTheRandomWord = function(aRandomWord) {
 
 //Laat resterende hoeveelheid beurten zien op de DOM
 const updateTriesDisplay = function(tries) {
-  tries++;
+
+  changeBackground(tries);
   document.querySelector(".lives span").innerHTML = 5 - tries;
   return tries;
 
@@ -99,7 +100,7 @@ const putInLetters = function() {
   }
 
   if (!word.includes(guessedLetter)) {
-
+    tries++;
     updateTriesDisplay(tries);
   }
 
@@ -123,7 +124,7 @@ function beginTheGame() {
   word = selectRandomWord(wordList).split("");
   showTheRandomWord(word);
   tries = 0;
-  document.querySelector(".lives span").innerHTML = 5 - 0;
+  updateTriesDisplay(tries);
 
   inputArray = [];
   myCorrectlyGuessedLetters(word, inputArray);
@@ -137,6 +138,12 @@ document.addEventListener("DOMContentLoaded", function() {
     .addEventListener("click", beginTheGame);
   beginTheGame();
 });
+
+//verander background
+
+const changeBackground=function(tries){
+  document.body.classList=`bodyBackground${tries}`;
+}
 
 // module.exports={beginTheGame, loseTheGame, winTheGame, selectRandomWord, showTheRandomWord, myCorrectlyGuessedLetters, myWronglyGuessedLetters,
 // putInLetters, clearInputValue, updateTriesDisplay, updateInputArray, wordGuessed}
