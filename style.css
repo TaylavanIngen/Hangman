@@ -2,8 +2,16 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #414A4F;
   text-align: center;
+  overflow-x: hidden;
   margin: 0;
 }
+
+.bodyBackground0{background-color: #ADD8E6;}
+.bodyBackground1{background-color: #44857D;}
+.bodyBackground2{background-color: #357171;}
+.bodyBackground3{background-color: #1B3D59;}
+.bodyBackground4{background-color: #8B0000;}
+.bodyBackground5{background-color: #000;}
 
 .container {
   background-color: #FFF;
@@ -52,37 +60,52 @@ body {
 }
 
 .win h2 {
-  color: red;
+  color: #357171;
+  font-size: 60px;
 }
 
 .lose h2 {
-  color: blue;
+  color: #8B0000;
 }
 
 .win, .lose {
-
   position: absolute;
-
 }
 
 .win {
-left:0;
-bottom:0;
-animation-name: win;
-animation-duration: 3s;
-animation-fill-mode: both;
-animation-iteration-count: infinite;
+  left:0;
+  bottom:0;
+  animation-name: win;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 
-.lose{
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
 
-  right:30px;
-  bottom:30px;
+.lose{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  top: 250px;
+  left: 35%;
+  right: 35%;
+  animation-name: lose;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
 }
 
 @keyframes win {
-  from{transform: translateX(-100px);}
-  to{transform: translateX(1000px);}
+  from{transform: translateX(-200px);}
+  to{transform: translateX(2000px);}
+}
+
+@keyframes lose {
+  from{transform: scale(0.1)}
+  to{transform: scale(3)}
+}
 
 .hangman-input-area {
   height: 400px;
