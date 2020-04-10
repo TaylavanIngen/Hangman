@@ -32,9 +32,7 @@ body {
 }
 
 .result {
-  position:relative;
   height: 300px;
-  overflow: hidden;
 }
 
 .lives {
@@ -48,30 +46,9 @@ body {
   font-size: 200px;
 }
 
-.win, .lose {
-
-  position: absolute;
-
-}
-
-.win {
-left:0;
-bottom:0;
-animation-name: win;
-animation-duration: 3s;
-animation-fill-mode: both;
-animation-iteration-count: infinite;
-}
-
-.lose{
-
-  right:30px;
-  bottom:30px;
-}
-
-@keyframes win {
-  from{transform: translateX(-100px);}
-  to{transform: translateX(1000px);}
+.win,
+.lose {
+  display: none;
 }
 
 .win h2 {
