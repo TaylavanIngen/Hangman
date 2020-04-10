@@ -59,6 +59,31 @@ body {
   color: blue;
 }
 
+.win, .lose {
+
+  position: absolute;
+
+}
+
+.win {
+left:0;
+bottom:0;
+animation-name: win;
+animation-duration: 3s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+.lose{
+
+  right:30px;
+  bottom:30px;
+}
+
+@keyframes win {
+  from{transform: translateX(-100px);}
+  to{transform: translateX(1000px);}
+
 .hangman-input-area {
   height: 400px;
 }
