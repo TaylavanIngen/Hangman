@@ -80,7 +80,8 @@ const myCorrectlyGuessedLetters= function(aRandomSplittedWord, inputArray) {
       return "_";
     }
   });
-  document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
+  return wordDisplay;
+  // document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
 };
 
 //FUNCTIE VOOR HET RADEN VAN HET WOORD
