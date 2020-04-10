@@ -13,6 +13,7 @@ const wordList = [
 const selectRandomWord = function(wordArray) {
   let randomIndex = Math.floor(Math.random() * wordArray.length);
   const myRandomWord = wordArray[randomIndex];
+  console.log(myRandomWord);
   return myRandomWord;
 };
 
@@ -48,7 +49,10 @@ const showTheRandomWord = function(aRandomWord) {
 
 //Laat resterende hoeveelheid beurten zien op de DOM
 const updateTriesDisplay = function(tries) {
+  tries++;
   document.querySelector(".lives span").innerHTML = 5 - tries;
+  return tries;
+
 };
 
 //Laat verkeerd geraden letters zien
@@ -71,6 +75,16 @@ const myCorrectlyGuessedLetters = function(aRandomSplittedWord, inputArray) {
   document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
 };
 
+//Update de inputArray
+
+const updateInputArray=function(letter, inputArray){
+
+inputArray.push(letter);
+console.log(inputArray);
+return inputArray;
+
+}
+
 //Functie voor het raden van het woord
 const putInLetters = function() {
   if (gameOver) {
@@ -84,11 +98,11 @@ const putInLetters = function() {
   }
 
   if (!word.includes(guessedLetter)) {
-    tries++;
+
     updateTriesDisplay(tries);
   }
 
-  inputArray.push(guessedLetter);
+  updateInputArray(guessedLetter, inputArray);
   myCorrectlyGuessedLetters(word, inputArray);
   myWronglyGuessedLetters(word, inputArray);
 
@@ -122,3 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
     .addEventListener("click", beginTheGame);
   beginTheGame();
 });
+
+module.exports={beginTheGame, loseTheGame, winTheGame, selectRandomWord, showTheRandomWord, myCorrectlyGuessedLetters, myWronglyGuessedLetters,
+putInLetters, clearInputValue, updateTriesDisplay, updateInputArray, wordGuessed}
