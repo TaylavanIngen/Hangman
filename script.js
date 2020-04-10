@@ -39,6 +39,7 @@ const winTheGame = function() {
 //Wanneer je het spel verloren hebt
 const loseTheGame = function() {
   document.querySelector(".lose").style.display = "block";
+  document.querySelector(".lives").style.visibility="hidden";
   gameOver = true;
 };
 
@@ -50,9 +51,10 @@ const showTheRandomWord = function(aRandomWord) {
 //Laat resterende hoeveelheid beurten zien op de DOM
 const updateTriesDisplay = function(tries) {
 
-  changeBackground(tries);
+
   document.querySelector(".lives span").innerHTML = 5 - tries;
   return tries;
+  changeBackground(tries);
 
 };
 
@@ -144,6 +146,9 @@ document.addEventListener("DOMContentLoaded", function() {
 const changeBackground=function(tries){
   document.body.classList=`bodyBackground${tries}`;
 }
+
+
+
 
 // module.exports={beginTheGame, loseTheGame, winTheGame, selectRandomWord, showTheRandomWord, myCorrectlyGuessedLetters, myWronglyGuessedLetters,
 // putInLetters, clearInputValue, updateTriesDisplay, updateInputArray, wordGuessed}

@@ -38,6 +38,7 @@ body {
 .lives {
   padding: 20px 0;
   line-height: 1;
+  display: block;
 }
 
 .lives span {
@@ -76,13 +77,15 @@ animation-iteration-count: infinite;
 
 .lose{
 
-  right:30px;
+
   bottom:30px;
+  left: 600px;
 }
 
 @keyframes win {
   from{transform: translateX(-100px);}
   to{transform: translateX(1000px);}
+}
 
 .hangman-input-area {
   height: 400px;
