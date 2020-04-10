@@ -68,8 +68,7 @@ const myCorrectlyGuessedLetters = function(aRandomSplittedWord, inputArray) {
       return "_";
     }
   });
-  return wordDisplay;
-  // document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
+  document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
 };
 
 //Functie voor het raden van het woord
