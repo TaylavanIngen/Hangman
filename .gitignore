@@ -1,0 +1,8 @@
+#negeer nodemodules
+
+node_modules
+
+#negeer lock json
+
+package.lock.json
+

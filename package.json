@@ -1,0 +1,30 @@
+
+ {
+  "name": "Hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "jest": "^25.3.0"
+ 
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaylavanIngen/Hangman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaylavanIngen/Hangman/issues"
+  },
+  "homepage": "https://github.com/TaylavanIngen/Hangman#readme"
+}
+
+
