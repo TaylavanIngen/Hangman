@@ -73,13 +73,7 @@ const myCorrectlyGuessedLetters = function(aRandomSplittedWord, inputArray) {
       return "_";
     }
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-  console.log(wordDisplay);
-=======
->>>>>>> bc2f31692bd6ecd86ca637574509787c8c9068a0
-=======
->>>>>>> 1e10161419b04b73497881507abe4d4c9e83553d
+
   document.querySelector(".the_word").innerHTML = wordDisplay.join(" ");
 };
 
