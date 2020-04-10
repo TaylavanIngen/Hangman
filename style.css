@@ -1,3 +1,27 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #414A4F;
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: 0 25%;
+  border: 1px solid black;
+}
+
+/* .title {
+
+} */
+
+.subtitle {
+  color: #1B3D59;
+}
+
+.result {
+  height: 300px;
+}
+
 .win,
 .lose {
   display: none;
@@ -10,3 +34,29 @@
 .lose h2 {
   color: blue;
 }
+
+/* .hangman-input-area {
+
+} */
+
+input {
+  width: 98px;
+  height: 34px;
+  border: 2px solid #357171;
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFF;
+}
+
+.guess{background-color: #Ed9230;}
+.guess:hover{background-color: #E96429; transition: 0.3s;}
+.restart{background-color: #44857D;}
+.restart:hover{background-color: #1B3D59; transition: 0.3s}
